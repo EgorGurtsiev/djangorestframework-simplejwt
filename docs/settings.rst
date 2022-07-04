@@ -190,6 +190,14 @@ please specify the ``AUTH_HEADER_NAME`` to be
 ``USER_ID_FIELD``
 -----------------
 
+Модель пользователя используемая для аутентификации. Используйте это поле
+если модель пользователя отличается от указанной в настройках Django.
+
+.. todo Translate
+
+``USER_ID_FIELD``
+-----------------
+
 The database field from the user model that will be included in generated
 tokens to identify users.  It is recommended that the value of this setting
 specifies a field that does not normally change once its initial value is

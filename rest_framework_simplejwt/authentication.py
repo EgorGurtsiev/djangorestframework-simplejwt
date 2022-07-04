@@ -1,4 +1,3 @@
-from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from rest_framework import HTTP_HEADER_ENCODING, authentication
 
@@ -24,7 +23,7 @@ class JWTAuthentication(authentication.BaseAuthentication):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.user_model = get_user_model()
+        self.user_model = api_settings.USER_MODEL
 
     def authenticate(self, request):
         header = self.get_header(request)
